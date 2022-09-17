@@ -1,0 +1,13 @@
+1-inherite User from PermissionsMixin.
+--note : we must initialize is_superuseer variable with True for our admin user, we don't need has_perm and has_perms methods in our custom user model anymore.
+--don't unregister groups in user model
+
+2-go to admin.py > fieldsets > permissions add 'groups','user_permissions' to tuple.
+
+3-filter_horizontal = ('groups',
+'user_permissions')
+
+4- add some groups to manage users
+5- add users while registering to different groups 
+
+
