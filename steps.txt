@@ -16,3 +16,18 @@
 7- go to your custom user manager and add following code to " createsuperuser "  function :
   user.is_superuser = True
 
+------ NOTES ------
+
+1-
+*** note :>> 'admin' means user can enter adminpanel & 'super_user' can access all control in admin panel
+
+2-
+*** list users of a group :
+users = User.objects.filter(groups__name = 'name of group')
+
+3-
+**** add user to a group ::
+user = request.user
+pro_users = Group.objects.get('pro_users')
+pro_users.user_set.add(user)
+
