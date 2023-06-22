@@ -1,2 +1,2 @@
-# _django-manage-permissions
+# django-manage-permissions
 manage django user permissions
